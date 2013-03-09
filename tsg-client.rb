@@ -6,10 +6,10 @@ require 'json'
 include REXML
 
 #Settings
-APIURL = 'https://sandbox.thesecuregateway.com/rest/v1/transactions'
-APIKEY = 'a20effd6dc1d4512888e6b06d870248a'
+APIURL = ''
+APIKEY = ''
 TIMEOUT = 15
-LANG_TYPE = 'json' #'xml' or 'json'
+LANG_TYPE = '' #'xml' or 'json'
 
 #Transaction xml model
 def buildXML()
@@ -209,7 +209,7 @@ end
 #parse JSON response according to its content
 def parseJSONResponse(res)
     temp = JSON.parse(res.body)
-    jsondoc = temp["transaction"]
+    jsondoc = temp
     puts jsondoc
             
     #Result Code
